@@ -8,14 +8,15 @@
 	insert  @goals(id_player, time_) values(2,'82:10')
 	insert  @goals(id_player, time_) values(3,'84:19')
 
+
 	-- without TIES
 	select * 
 	from @goals
 
 	-- with TIES
-	select top 1 with TIES 
+	select	top 1 with TIES 
 			id_player
-		,	count(*)
+		,	count(*) as Cnt
 	from @goals
 	group by id_Player
 	order by count(*) desc

@@ -1,6 +1,6 @@
 declare @spid int
 
-set @spid = 238 --номер процесса
+set @spid = 268 --номер процесса
 
 SELECT  
 		session_id				=	S.session_id
